@@ -1,5 +1,6 @@
 package com.gradle.dependencymanagement.web
 
+import com.google.common.base.Preconditions
 import com.gradle.dependencymanagement.persistence.BeansRepository
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -12,6 +13,9 @@ class BeansController constructor(private val repository: BeansRepository) {
 
     @GetMapping
     fun home(model: Model): String {
+        // Transitive dependency to google guava leaks into web module
+        Preconditions.checkNotNull(model)
+
         model.addAttribute("beans", repository.getAll())
         return "home"
     }

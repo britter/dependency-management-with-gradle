@@ -8,6 +8,8 @@ repositories {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
+
+    compile("com.google.guava:guava:28.1-jre")
 }
 
 tasks {
