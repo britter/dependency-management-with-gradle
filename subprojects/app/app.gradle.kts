@@ -7,10 +7,10 @@ repositories {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib-jdk8"))
 
-    compile("org.springframework.boot:spring-boot-starter:2.1.9.RELEASE")
-    compile(project(":web"))
+    implementation("org.springframework.boot:spring-boot-starter:2.1.9.RELEASE")
+    implementation(project(":web"))
 }
 
 tasks {

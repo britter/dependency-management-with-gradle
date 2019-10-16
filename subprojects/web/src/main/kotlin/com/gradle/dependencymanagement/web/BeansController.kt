@@ -13,7 +13,6 @@ class BeansController constructor(private val repository: BeansRepository) {
 
     @GetMapping
     fun home(model: Model): String {
-        // Transitive dependency to google guava leaks into web module
         Preconditions.checkNotNull(model)
 
         model.addAttribute("beans", repository.getAll())

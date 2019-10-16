@@ -7,8 +7,8 @@ repositories {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib-jdk8"))
 
-    compile(project(":model"))
-    compile("org.springframework:spring-context:5.1.0.RELEASE")
+    api(project(":model"))
+    implementation("org.springframework:spring-context:5.1.0.RELEASE")
 }
