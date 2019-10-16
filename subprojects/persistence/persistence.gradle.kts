@@ -3,6 +3,8 @@ plugins {
 }
 
 dependencies {
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"))
+    implementation("org.springframework:spring-context")
+
     api(project(":model"))
-    implementation("org.springframework:spring-context:5.1.0.RELEASE")
 }

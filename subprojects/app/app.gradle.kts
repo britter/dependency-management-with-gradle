@@ -3,6 +3,8 @@ plugins {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter:2.1.9.RELEASE")
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"))
+    implementation("org.springframework.boot:spring-boot-starter")
+
     implementation(project(":web"))
 }

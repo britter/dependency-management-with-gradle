@@ -3,8 +3,9 @@ plugins {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:2.1.9.RELEASE")
-    implementation("org.springframework.boot:spring-boot-starter-mustache:2.1.9.RELEASE")
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"))
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-mustache")
 
     api(project(":model"))
     api(project(":persistence"))
