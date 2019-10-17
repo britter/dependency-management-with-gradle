@@ -1,6 +1,8 @@
 package com.gradle.dependencymanagement.web
 
 import com.google.common.base.Preconditions
+import com.gradle.dependencymanagement.model.Beans
+import com.gradle.dependencymanagement.model.Type
 import com.gradle.dependencymanagement.persistence.BeansRepository
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model

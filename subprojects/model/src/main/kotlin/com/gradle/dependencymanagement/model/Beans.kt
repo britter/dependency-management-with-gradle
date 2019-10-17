@@ -1,5 +1,6 @@
 package com.gradle.dependencymanagement.model
 
+import com.google.common.base.CaseFormat
 import com.google.common.base.Preconditions
 
 data class Beans(
@@ -9,10 +10,15 @@ data class Beans(
         val stars: Int
 ) {
     init {
-        Preconditions.checkArgument(stars >= 0 && stars >= 5, "Stars have to be between 0 and 5")
+        Preconditions.checkArgument(stars in 0..5, "Stars have to be between 0 and 5")
     }
+
+    fun displayName(): String = "$name (${type.displayName()}) by $roaster"
 }
 
 enum class Type {
-    ESPRESSO, FILTER
+    ESPRESSO, FILTER;
+
+    fun displayName(): String =
+            CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, name)
 }

@@ -6,4 +6,5 @@ interface BeansRepository {
 
     fun getAll(): List<Beans>
 
+    fun save(beans: Beans)
 }
