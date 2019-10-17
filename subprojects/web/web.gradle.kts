@@ -13,4 +13,5 @@ dependencies {
 
     testImplementation(platform(project(":test-platform")))
     testImplementation("io.mockk:mockk")
+    testImplementation(testFixtures(project(":model")))
 }

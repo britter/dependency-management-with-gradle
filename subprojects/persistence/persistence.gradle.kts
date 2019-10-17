@@ -9,4 +9,5 @@ dependencies {
     api(project(":model"))
 
     testImplementation(platform(project(":test-platform")))
+    testImplementation(testFixtures(project(":model")))
 }

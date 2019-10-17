@@ -1,5 +1,6 @@
 package com.gradle.dependencymanagement.web
 
+import com.gradle.dependencymanagement.model.BeansTemplates
 import com.gradle.dependencymanagement.persistence.BeansRepository
 import io.mockk.every
 import io.mockk.mockk
