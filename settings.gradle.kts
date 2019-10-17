@@ -4,6 +4,7 @@ include("app")
 include("model")
 include("persistence")
 include("web")
+include("test-platform")
 
 for (project in rootProject.children) {
     val projectDirName = project.name
